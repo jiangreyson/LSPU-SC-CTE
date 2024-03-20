@@ -1,0 +1,140 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+header{
+  background-color: #7facd7;
+}
+
+div.header2 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+/* background: linear-gradient(to right, #fff 0%,#fff 50%,#429aff 50%,#429aff 100%); */
+}
+
+.adviserimg {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 200px;
+  border-radius: 10% 10% 10% 10% / 10% 10% 10% 10% ;
+}
+  
+.header2 img {
+  display: block; /* To remove extra spacing below the image */
+  margin: 0 auto; /* Auto margin horizontally centers the image within the div */
+  height: 140px;
+  position: relative;
+  z-index: 9;
+}
+h2.cte{
+  text-align: center;
+  font-family: "Lucida", "Lucida Handwriting", Cursive;
+}
+.teacherbodydesign {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+/* ------------------------------ */
+section{
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+main.card1 {
+  min-height: 100vh;
+  background-image: url('./image/ls.jpg');
+  background-size: cover;
+  position: relative;
+}
+
+main.card1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.5)); /* Adjust the gray color and transparency */
+}
+
+/* Add blur effect if supported */
+@supports (backdrop-filter: blur(3px)) {
+  main.card1::before {
+      backdrop-filter: blur(3px); /* Adjust the blur radius */
+      background: none; /* Remove background for browsers that support backdrop-filter */
+  }
+}
+
+
+.card1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: "ls.jpg";
+}
+
+.card {
+  width: 50%; /* Make each card fill the width of the screen */
+  margin-bottom: 20px; /* Add space between cards */
+  height: auto; /* Adjust the height based on your content */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* -------------------------------------- */
+.page-container {
+  flex: 1;
+}
+
+.carousel {
+  max-width: 800px; /* Set the maximum width of the carousel */
+  margin: 0 auto; /* Center the carousel horizontally */
+}
+
+.carousel-inner {
+  max-height: 400px; /* Set the maximum height of the carousel */
+}
+
+div.footer2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    background: transparent;
+    text-shadow: 1px 1px #535353;
+    color: white;
+}
+* {
+    padding: 0;
+}
+
+
+div.footer_container2 {
+    margin-top: auto;
+    bottom: 30px;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    background-color: #222;
+    color: white;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .header2 img {
+      height: auto;
+      
+      width: 80%; /* Make the image fill the width of its container on smaller screens */
+    }
+  }
